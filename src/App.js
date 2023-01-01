@@ -10,7 +10,7 @@ import { list } from "./Components/WatchListContext";
 
 const App = () => {
   const base_url = "https://api.themoviedb.org/3/movie/";
-  const query_url = `?api_key=2a590dc31c8c1b1df56b1c94ca625897&language=en-US`;
+  const query_url = process.env.REACT_APP_API_KEY;
   const base_img = "https://image.tmdb.org/t/p/w500";
 
   const [num, setNum] = useState("");
