@@ -8,7 +8,11 @@ You can iniate a pull request and make Amazing contributions to this:
 
 ## Some Import information you may
 
-## Run this command to clone the repo "git clone https://github.com/Easyblend/Film-Blend.git"
+###### Run this command to clone the repo "git clone https://github.com/Easyblend/Film-Blend.git"
+
+Request for your own Personal API key from [Get API KEY](https://www.themoviedb.org/documentation/api)
+
+###### Without it your cant run the application
 
 ### `npm start`
 

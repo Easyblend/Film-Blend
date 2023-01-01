@@ -10,7 +10,7 @@ import { list } from "./Components/WatchListContext";
 
 const App = () => {
   const base_url = "https://api.themoviedb.org/3/movie/";
-  const query_url = process.env.REACT_APP_API_KEY;
+  const query_url = process.env.REACT_APP_API_KEY; //Insert your own API key here
   const base_img = "https://image.tmdb.org/t/p/w500";
 
   const [num, setNum] = useState("");
