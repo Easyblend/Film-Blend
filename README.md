@@ -1,10 +1,14 @@
-# Getting Started with Create React App
+# Film Blend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+You can Check Film Blend out [Click Here](https://film-blend.netlify.app/).
 
-## Available Scripts
+## It's Open sourse
 
-In the project directory, you can run:
+You can iniate a pull request and make Amazing contributions to this:
+
+## Some Import information you may
+
+## Run this command to clone the repo "git clone https://github.com/Easyblend/Film-Blend.git"
 
 ### `npm start`
 
