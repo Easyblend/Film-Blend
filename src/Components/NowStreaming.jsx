@@ -36,7 +36,7 @@ const NowStreaming = ({ baseImg }) => {
     <>
       {load ? (
         <div className="load">
-          <img src="https://i.stack.imgur.com/hzk6C.gif" alt="" />
+          <span class="loader"></span>
         </div>
       ) : (
         <>
@@ -46,14 +46,16 @@ const NowStreaming = ({ baseImg }) => {
               className="col banner-img  mx-auto"
               style={{
                 backgroundImage: `url(https://images.unsplash.com/photo-1585951237318-9ea5e175b891?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)`,
-              }}></div>
+              }}
+            ></div>
           </div>
           <CardListComponent baseImg={baseImg} page={page} newData={newData} />
           <div className="d-flex justify-content-center mx-auto">
             {page > 1 ? (
               <button
                 className="btn bg-light mx-auto d-flex my-3"
-                onClick={previousPage}>
+                onClick={previousPage}
+              >
                 Previous Page
               </button>
             ) : (
@@ -62,7 +64,8 @@ const NowStreaming = ({ baseImg }) => {
             {page < 100 ? (
               <button
                 className="btn bg-light mx-auto d-flex my-3"
-                onClick={nextPage}>
+                onClick={nextPage}
+              >
                 Next Page
               </button>
             ) : (

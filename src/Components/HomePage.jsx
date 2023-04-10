@@ -61,56 +61,46 @@ const HomePage = ({ baseImg, baseUrl, queryUrl }) => {
   }
 
   return (
-    <div className="main-container-navigate">
-      {load ? (
-        <div className="load">
-          <img
-            src="https://i.stack.imgur.com/hzk6C.gif"
-            alt=""
-            width="fit-content"
-            height="fit-content"
-          />
-        </div>
-      ) : (
+    <>
+      <div className="mt-4 container-fluid ">
+        <div
+          className="col banner-img  mx-auto"
+          data-aos="zoom-out"
+          style={{
+            backgroundImage: `url(${img})`,
+          }}
+        ></div>
+      </div>
+      {!load ? (
         <>
-          <div className="mt-4 container-fluid ">
-            <div
-              className="col banner-img  mx-auto"
-              data-aos="zoom-out"
-              style={{
-                backgroundImage: `url(${img})`,
-              }}></div>
-
-            {prefered.name === "popular" ? (
-              <h3 className="text-center movie-link-title mt-3">
-                Popular Movies
-              </h3>
-            ) : prefered.name === "upcoming" ? (
-              <h3 className="text-center movie-link-title mt-3">
-                Upcoming Movies
-              </h3>
-            ) : prefered.name === "top_rated" ? (
-              <h3 className="text-center movie-link-title mt-3">
-                Top Rated Movies
-              </h3>
-            ) : prefered.name === "kids" ? (
-              <h3 className="text-center movie-link-title mt-3">Kids Movies</h3>
-            ) : prefered.name === "now_playing" ? (
-              <h3 className="text-center movie-link-title mt-3">
-                Top Streaming Movies
-              </h3>
-            ) : (
-              <h3 className="text-center movie-link-title mt-3">
-                Adult Channel
-              </h3>
-            )}
-          </div>
+          {prefered.name === "popular" ? (
+            <h3 className="text-center movie-link-title mt-3">
+              Popular Movies
+            </h3>
+          ) : prefered.name === "upcoming" ? (
+            <h3 className="text-center movie-link-title mt-3">
+              Upcoming Movies
+            </h3>
+          ) : prefered.name === "top_rated" ? (
+            <h3 className="text-center movie-link-title mt-3">
+              Top Rated Movies
+            </h3>
+          ) : prefered.name === "kids" ? (
+            <h3 className="text-center movie-link-title mt-3">Kids Movies</h3>
+          ) : prefered.name === "now_playing" ? (
+            <h3 className="text-center movie-link-title mt-3">
+              Top Streaming Movies
+            </h3>
+          ) : (
+            <h3 className="text-center movie-link-title mt-3">Adult Channel</h3>
+          )}{" "}
           <CardListComponent newData={newData} baseImg={baseImg} />
           <div className="d-flex justify-content-center mx-auto">
             {page > 1 ? (
               <button
                 className="btn bg-light mx-auto d-flex my-3"
-                onClick={previousPage}>
+                onClick={previousPage}
+              >
                 Previous Page
               </button>
             ) : (
@@ -119,7 +109,8 @@ const HomePage = ({ baseImg, baseUrl, queryUrl }) => {
             {page < 100 ? (
               <button
                 className="btn bg-light mx-auto d-flex my-3"
-                onClick={nextPage}>
+                onClick={nextPage}
+              >
                 Next Page
               </button>
             ) : (
@@ -127,8 +118,12 @@ const HomePage = ({ baseImg, baseUrl, queryUrl }) => {
             )}
           </div>
         </>
+      ) : (
+        <div className=" d-flex mx-auto text-center align-items-center justify-content-center m-5 ">
+          <span class="loader"></span>
+        </div>
       )}
-    </div>
+    </>
   );
 };
 

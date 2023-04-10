@@ -24,11 +24,9 @@ const Searched = ({ baseImg }) => {
   return (
     <div className="mt-5 search-container">
       {load ? (
-        <div className="load">
-          <img
-            src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/3f3a3831234507.564a1d2338123.gif"
-            alt=""
-          />
+        <div className=" d-flex mx-auto text-center align-items-center justify-content-center h-100">
+          {" "}
+          <span class="loader"></span>
         </div>
       ) : (
         <>
