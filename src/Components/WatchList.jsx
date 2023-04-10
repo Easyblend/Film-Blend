@@ -10,7 +10,7 @@ const WatchList = ({ baseImg }) => {
   let data = JSON.parse(localStorage.getItem("data"));
 
   const { num, setNum } = useContext(list);
-  const [fetchs, setFecth] = useState([]);
+
   const clearWatch = () => {
     localStorage.clear("data");
     setNum("");
@@ -27,7 +27,8 @@ const WatchList = ({ baseImg }) => {
           <CardListComponent newData={data} baseImg={baseImg} />
           <button
             className="clear-watch mx-auto d-flex btn my-5"
-            onClick={clearWatch}>
+            onClick={clearWatch}
+          >
             Clear WatchList
           </button>
         </>
@@ -37,7 +38,8 @@ const WatchList = ({ baseImg }) => {
           <Link
             to="/popular"
             type="button"
-            className=" btn btn-success text-center mx-auto">
+            className=" btn btn-success text-center mx-auto"
+          >
             Discover your Taste
           </Link>
         </div>
